@@ -2,7 +2,6 @@
   from {
     inset-inline-start: -16px;
   }
-
   to {
     inset-inline-start: -12px;
   }
@@ -12,7 +11,6 @@
   from {
     transform: scale(1);
   }
-
   to {
     transform: scale(1.5);
   }
@@ -22,27 +20,26 @@
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
 
-.theme-menu__button {
+.theme-toggle {
   transition: opacity 0.5s ease;
 }
 
-.theme-menu__button:disabled::before {
+.theme-toggle:disabled::before {
   animation: arrow 0.5s ease-in-out infinite alternate;
 }
 
-.theme-menu__button::after {
+.theme-toggle::after {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s;
 }
 
-.theme-menu__button:focus-visible::after {
+.theme-toggle:focus-visible::after {
   transform: scaleX(1);
 }
 
@@ -50,7 +47,7 @@
   transition: box-shadow 0.3s ease;
 }
 
-.card__icon-button {
+.like-icon-trigger {
   transition: border 0.3s ease;
 }
 

@@ -1,5 +1,9 @@
-/* Этот скрипт использует имена классов theme-menu__button, theme-dark, theme-light и theme-auto;
-еще атрибуты disabled и data-theme. Поэтому их нельзя менять в HTML. */
+/*
+  Обновлённый скрипт с учётом нового имени класса кнопки:
+  ✦ .theme-toggle — вместо .theme-menu__button (в HTML)
+  ✦ theme-dark, theme-light, theme-auto — без изменений
+  ✦ data-theme и disabled — без изменений
+*/
 
 function changeTheme(theme) {
   document.documentElement.className = '';
@@ -16,7 +20,7 @@ function changeTheme(theme) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
-  const themeButtons = document.querySelectorAll('.theme-menu__button');
+  const themeButtons = document.querySelectorAll('.theme-toggle');
 
   function setDisabled(theme) {
     themeButtons.forEach((item) => {
@@ -28,18 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if ([...root.classList].includes('theme-light')) {
+  if (root.classList.contains('theme-light')) {
     setDisabled('light');
-  } else if ([...root.classList].includes('theme-dark')) {
+  } else if (root.classList.contains('theme-dark')) {
     setDisabled('dark');
   } else {
     setDisabled('auto');
   }
 
   themeButtons.forEach((button) => {
-    button.onclick = () => {
-      changeTheme(button.getAttribute('data-theme'));
-      setDisabled(button.getAttribute('data-theme'));
-    };
+    button.addEventListener('click', () => {
+      const selectedTheme = button.getAttribute('data-theme');
+      changeTheme(selectedTheme);
+      setDisabled(selectedTheme);
+    });
   });
 });
