@@ -4,7 +4,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -22,12 +21,12 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--card-font-weight, 400);
+  font-variation-settings: 'wght' var(--card-font-weight, 410);
 }
 
 .container {
   margin: 0 auto;
-  inline-size: var(--card-inline-size, min(100%, 700px));
+  inline-size: var(--card-inline-size, min(100%, 715px));
 }
 
 .header {
@@ -35,13 +34,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: clamp(20.4375rem, 14.6041rem + 13.9932vw, 23rem);
   margin-top: 100px;
   margin-bottom: 98px;
   border: 2px solid #000;
-  font-family: var(--font-accent, 'Courier New', monospace);
+  font-family: var(--font-accent, fantasy);
   text-transform: uppercase;
   background-color: var(--bg-color);
+  padding-block: clamp(120px, 10vw, 136px);
+  padding-inline: 23px;
+
 }
 
 .main__container {
@@ -57,7 +58,6 @@
 }
 
 .header__title {
-  margin-block-end: 25px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
@@ -65,71 +65,6 @@
   display: grid;
   gap: 12px;
   padding-inline-start: 20px;
-}
-
-.theme-menu__button {
-  position: relative;
-  display: block;
-  border: none;
-  padding: 0;
-  font-size: var(--accent-font-size, 0.875rem);
-  text-transform: inherit;
-  background-color: transparent;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-  cursor: pointer;
-}
-
-.theme-menu__button::before {
-  content: "▶";
-  position: absolute;
-  opacity: 0;
-  transform: translateX(0px);
-  animation-name: triangle-move;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  inset-inline-start: -20px;
-  inset-block-start: 0;
-  animation-duration: 0.5s;
-}
-
-.theme-menu__button[disabled]::before {
-  opacity: 0.6;
-}
-
-.theme-menu__button[disabled] {
-  opacity: 0.6;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-  pointer-events: none;
-}
-
-.theme-menu__button:hover {
-  opacity: 0.6;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-}
-
-.theme-menu__button::after {
-  content: "";
-  position: relative;
-  display: block;
-  background-color: var(--main-color, #000);
-  transition-duration: 0.3s;
-  transform: scaleX(0);
-  transform-origin: left center;
-  block-size: 2px;
-}
-
-.theme-menu__button:focus {
-  outline: none;
-  opacity: 0.6;
-}
-
-.theme-menu__button:focus-visible::after {
-  transition-duration: 0.3s;
-  transform: scaleX(1);
 }
 
 .card {
@@ -143,7 +78,7 @@
   font-weight: 700;
   font-size: var(--main-font-size, 1.125rem);
   line-height: normal;
-  font-variation-settings: 'wght' var(--card-title-font-weight, 700);
+  font-variation-settings: 'wght' var(--card-title-font-weight, 715);
 }
 
 .card__body {
@@ -155,12 +90,11 @@
 }
 
 .card__text {
-  margin-block: 0 27px;
+  margin-block-end: 25px;
+  font-variation-settings: 'wght' var(--card-title-font-weight, 410);
 }
 
-.card__opinion {
-  margin-block-end: 25px;
-}
+
 
 .card__img-container {
   position: relative;
@@ -226,7 +160,6 @@
   .card__img-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--bg-color, #fff);
-    text-stroke: 1px var(--bg-color, #fff);
   }
 }
 
@@ -243,6 +176,7 @@
   transition-duration: 0.3s;
   transition-timing-function: ease;
   cursor: pointer;
+  transition-duration: 0.3s;
 }
 
 .card__icon-button:focus {
@@ -251,7 +185,6 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--main-color, #000);
-  transition-duration: 0.3s;
   transition-timing-function: ease;
 }
 
@@ -345,6 +278,7 @@
   padding: 0;
   background-color: var(--bg-color, #fff);
   cursor: pointer;
+  transition-duration: 0.3s;
 }
 
 .button::after {
@@ -368,7 +302,7 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--main-color, #000);
-  transition-duration: 0.3s;
+
 }
 
 .button__text {
@@ -379,6 +313,7 @@
   font-size: var(--accent-font-size, 0.875rem);
   line-height: 0.9;
   mix-blend-mode: difference;
+  text-wrap: nowrap;
 }
 
 .save-button {
