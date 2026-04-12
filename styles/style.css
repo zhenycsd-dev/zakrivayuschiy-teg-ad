@@ -324,6 +324,7 @@
   margin: 0 auto;
   padding: 15px 20px;
   max-inline-size: 83vw;
+  margin-block: 50px 105px;
 }
 
 .card__like-button {
@@ -335,10 +336,7 @@
   grid-column: 1 / -1;
   text-transform: uppercase;
   inline-size: 100%;
-}
-
-.save-button {
-  margin-block: 50px 105px;
+  margin-block: 0px;
 }
 
 .floppy {
@@ -375,10 +373,6 @@
 .floppy--modal {
   --floppy-size: 38px;
   grid-column: 1;
-}
-
-.modal__button {
-  margin-block: 0px;
 }
 
 .modal::backdrop {
