@@ -1,6 +1,6 @@
 :root {
     --font: 'Inter-Variable';
-    --font-accent: 'PressStart2P-Regular';
+    --font-accent: 'PressStart2P';
     --main-font-size: 1.125rem;
     --accent-font-size: 0.875rem;
     --floppy-size: 21px;
@@ -10,8 +10,8 @@
     --bg-color: #fff;
     --heart-hover: #000;
     --button-text-color: #fff;
-    --card-font-weight: 400;
-    --card-title-font-weight: 700;
+    --card-font-weight: 410;
+    --card-title-font-weight: 715;
     --bg-image: repeating-linear-gradient(
         to right, 
         #d3d3d3 0,
