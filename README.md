@@ -1,1 +1,1 @@
-https://github.com/zhenycsd-dev/zakrivayuschiy-teg-ad/tree/1019d4708c5798cef10a18924b49c9af5fef3f1d
+https://zhenycsd-dev.github.io/zakrivayuschiy-teg-ad/
