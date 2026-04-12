@@ -61,12 +61,6 @@
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
-.theme-menu__list {
-  display: grid;
-  gap: 12px;
-  padding-inline-start: 20px;
-}
-
 .card {
   border: 2px solid var(--main-color, #000);
   background-color: var(--bg-color, #fff);
