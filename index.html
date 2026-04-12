@@ -232,22 +232,20 @@
         </div>
       </article>
     </main>
-    <footer class="footer">
-      <button class="button save-button" type="button" onclick="window['dialog'].showModal()" aria-controls="dialog"> 
-        <svg class="floppy">
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <span class="button__text">
-          Сохранить на память
-        </span>
-      </button>
-    </footer>
+    <button class="button save-button" type="button" onclick="window['dialog'].showModal()" aria-controls="dialog"> 
+      <svg class="floppy">
+        <use href="./svg/floppy.svg#floppy"></use>
+      </svg>
+      <span class="button__text">
+        Сохранить на память
+      </span>
+    </button>
     <dialog id="dialog" class="modal">
       <svg class="modal__icon">
         <use href="./svg/frame.svg#frame"></use>
       </svg>
-      <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
-      <button type="button" class="button save-button modal__button" onclick="window['dialog'].close()">
+      <p class="modal__title">Вставьте дискету, чтобы продолжить</p>
+      <button type="button" class="button  modal__button" onclick="window['dialog'].close()">
         <span class="button__text">Ок</span>          
       </button>
     </dialog>

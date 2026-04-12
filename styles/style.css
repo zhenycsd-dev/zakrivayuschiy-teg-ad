@@ -53,7 +53,7 @@
 
 .title {
   margin-block-end: 20px;
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-size: clamp(3.0625rem, 2.8317rem + 0.9846vw, 4.0625rem);
   text-decoration: none;
 }
 
@@ -91,7 +91,7 @@
 
 .card__text {
   margin-block-end: 25px;
-  font-variation-settings: 'wght' var(--card-title-font-weight, 410);
+  font-variation-settings: 'wght' var(--card-font-weight, 410);
 }
 
 
@@ -167,6 +167,7 @@
   display: flex;
   margin-inline: auto 0;
   max-block-size: 38px;
+  gap: 7px;
 }
 
 .card__icon-button {
@@ -184,7 +185,6 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--main-color, #000);
-  transition-timing-function: ease;
 }
 
 .sparks {
@@ -337,8 +337,8 @@
   inline-size: 100%;
 }
 
-.footer {
-  padding-block: 50px 105px;
+.save-button {
+  margin-block: 50px 105px;
 }
 
 .floppy {
@@ -353,25 +353,32 @@
 .modal[open] {
   display: grid;
   grid-template-columns: auto auto;
+  grid-template-rows: auto fit-content;
+  align-items: center;
   row-gap: 30px;
-  column-gap: clamp(12px, 2vw, 20px);
+  column-gap: 20px;
   padding: var(--modal-padding-inline, 30px) 30px;
   color: var(--main-color, #000);
-  font-family: var(--font-accent, 'Courier New', monospace);
-  font-size: var(--accent-font-size, 0.875rem);
-  line-height: 1.5;
+  font-family: var(--font-accent, 'fantasy');
+  font-size: 14px;
   text-transform: uppercase;
   background-color: var(--bg-color, #fff);
-  max-inline-size: 357px;
+  max-inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
 }
 
 .modal__title {
   font-size: var(--accent-font-size, 0.875rem);
   line-height: 1.5;
+  grid-column: 2;
 }
 
 .floppy--modal {
   --floppy-size: 38px;
+  grid-column: 1;
+}
+
+.modal__button {
+  margin-block: 0px;
 }
 
 .modal::backdrop {
@@ -384,4 +391,10 @@
   width: 39px;
   height: 39px;
   color: var(--main-color, #000);
+}
+
+@media (width <= 375px) {
+  .floppy {
+    --floppy-size: 28px;
+  }
 }
